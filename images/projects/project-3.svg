@@ -2,22 +2,54 @@
   <defs>
     <linearGradient id="p3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#311042" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
     </linearGradient>
   </defs>
-  <rect width="600" height="380" fill="url(#p3Grad)" rx="12"/>
-  <rect x="30" y="30" width="540" height="40" rx="8" fill="#1e293b" />
-  <circle cx="55" cy="50" r="6" fill="#ef4444" />
-  <circle cx="75" cy="50" r="6" fill="#f59e0b" />
-  <circle cx="95" cy="50" r="6" fill="#10b981" />
-  <rect x="120" y="42" width="220" height="16" rx="4" fill="#334155" />
-  <!-- Terminal mockup -->
-  <rect x="50" y="95" width="500" height="150" rx="8" fill="#090d16" stroke="#334155" stroke-width="1.5"/>
-  <text x="70" y="130" fill="#a855f7" font-family="monospace" font-size="14">&gt; python -m simulation_controller</text>
-  <text x="70" y="160" fill="#22c55e" font-family="monospace" font-size="14">[OK] Sensor calibration initialized</text>
-  <text x="70" y="190" fill="#38bdf8" font-family="monospace" font-size="14">[RUNNING] Control loop active (100Hz)</text>
-  <text x="70" y="220" fill="#94a3b8" font-family="monospace" font-size="14">&gt; waiting for telemetry stream...</text>
-  <!-- Center tag -->
-  <text x="300" y="295" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" font-weight="600">Engineering & Algorithms Project (Placeholder)</text>
-  <text x="300" y="325" fill="#64748b" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Replace with your project screenshot in images/projects/</text>
+  <rect width="600" height="380" fill="url(#p3Grad)" rx="16"/>
+  
+  <!-- Browser Window Header -->
+  <rect x="30" y="25" width="540" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="55" cy="46" r="6" fill="#ef4444" />
+  <circle cx="75" cy="46" r="6" fill="#f59e0b" />
+  <circle cx="95" cy="46" r="6" fill="#10b981" />
+  <rect x="120" y="38" width="310" height="16" rx="4" fill="#0f172a" />
+  <text x="130" y="50" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">https://my-portfolio-qvypp3ht3-hassan-aeb8.vercel.app</text>
+
+  <!-- Portfolio UI Mockup -->
+  <g transform="translate(50, 90)">
+    <!-- Dark Hero Banner -->
+    <rect x="0" y="0" width="500" height="180" rx="12" fill="#0b1120" stroke="#334155" stroke-width="1.5"/>
+    
+    <!-- Code Bracket Logo -->
+    <text x="25" y="36" fill="#6366f1" font-family="monospace" font-size="16" font-weight="bold">&lt;<tspan fill="#f8fafc">Hassan</tspan><tspan fill="#818cf8">.dev</tspan> /&gt;</text>
+    
+    <!-- Status badge -->
+    <rect x="330" y="20" width="145" height="22" rx="11" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="1"/>
+    <circle cx="345" cy="31" r="4" fill="#22c55e"/>
+    <text x="356" y="35" fill="#c7d2fe" font-family="sans-serif" font-size="10">Available for Roles</text>
+
+    <!-- Bio Mockup lines -->
+    <text x="25" y="70" fill="#f8fafc" font-family="sans-serif" font-size="18" font-weight="bold">Front-End Developer &amp; Mechatronics</text>
+    <rect x="25" y="88" width="320" height="10" rx="3" fill="#475569"/>
+    <rect x="25" y="106" width="280" height="10" rx="3" fill="#475569"/>
+
+    <!-- CTA buttons -->
+    <rect x="25" y="132" width="110" height="30" rx="6" fill="url(#glowGrad)"/>
+    <text x="80" y="151" fill="#ffffff" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">View Projects</text>
+
+    <rect x="145" y="132" width="110" height="30" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="200" y="151" fill="#e2e8f0" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Download CV</text>
+
+    <!-- Avatar circle -->
+    <circle cx="410" cy="115" r="45" fill="#1e293b" stroke="url(#glowGrad)" stroke-width="2.5"/>
+    <text x="410" y="122" fill="#818cf8" font-family="monospace" font-size="24" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+
+  <!-- Title footer -->
+  <text x="300" y="325" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">Personal Developer Portfolio &amp; Web Showcase</text>
+  <text x="300" y="350" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">HTML5 &bull; CSS3 Variables &bull; Vanilla JS &bull; Vercel CI/CD</text>
 </svg>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Abdulganiu Oladimeji - Curriculum Vitae</title>
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #2563eb;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --border-color: #e2e8f0;
+      --bg-light: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-main);
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Floating action toolbar for web view */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+    }
+
+    .toolbar-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent-color);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background: #e2e8f0;
+    }
+
+    /* Page container */
+    .page {
+      max-width: 820px;
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 44px 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .headline {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary-color);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    .summary-text {
+      color: var(--text-main);
+      text-align: justify;
+      line-height: 1.55;
+    }
+
+    /* Skill blocks */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skill-row {
+      display: flex;
+      line-height: 1.45;
+    }
+
+    .skill-label {
+      width: 175px;
+      font-weight: 700;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    .skill-items {
+      color: var(--text-main);
+      flex-grow: 1;
+    }
+
+    /* Entry items */
+    .entry {
+      margin-bottom: 12px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .entry-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .entry-company {
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    .entry-date {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+
+    .entry-location {
+      font-size: 12px;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    ul.bullet-list {
+      margin-left: 18px;
+      margin-top: 4px;
+      color: var(--text-main);
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 3.5px;
+      line-height: 1.45;
+    }
+
+    ul.bullet-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-tech {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .project-tech strong {
+      color: var(--text-muted);
+    }
+
+    /* Print styling rules */
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 11pt;
+        color: #000000;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .page {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      header {
+        border-bottom-color: #0f172a;
+      }
+
+      .name {
+        color: #0f172a;
+      }
+
+      .headline {
+        color: #2563eb;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .section-title {
+        border-bottom-color: #cbd5e1;
+        break-after: avoid;
+      }
+
+      .entry {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top toolbar for viewing in browser -->
+  <div class="toolbar">
+    <div class="toolbar-title">Hassan Abdulganiu Oladimeji &mdash; Curriculum Vitae</div>
+    <div class="toolbar-actions">
+      <a href="index.html" class="btn btn-secondary">&larr; Back to Portfolio</a>
+      <button onclick="window.print()" class="btn btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <main class="page">
+    
+    <!-- HEADER -->
+    <header>
+      <h1 class="name">Hassan Abdulganiu Oladimeji</h1>
+      <p class="headline">Front-End Web Developer &bull; Mechatronics Engineering</p>
+      <div class="contact-bar">
+        <span class="contact-item">Lagos, Nigeria</span>
+        <span class="contact-item">&bull;</span>
+        <span class="contact-item"><a href="tel:+2349060454753">+234 906 045 4753</a></span>
+        <span class="contact-item">&bull;</span>
+        <span class="contact-item"><a href="mailto:abdulganiuhassan6@gmail.com">abdulganiuhassan6@gmail.com</a></span>
+        <span class="contact-item">&bull;</span>
+        <span class="contact-item"><a href="https://my-portfolio-qvypp3ht3-hassan-aeb8.vercel.app" target="_blank">Portfolio</a></span>
+        <span class="contact-item">&bull;</span>
+        <span class="contact-item"><a href="https://github.com/hassanabdulganiu" target="_blank">GitHub</a></span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Detail-oriented Front-End Web Developer with an academic background in Mechatronics Engineering and practical industrial automation experience at <strong>Nestlé</strong>. Skilled in designing and developing responsive, accessible, and high-performance web applications using modern HTML5, CSS3, and JavaScript (ES6+). Combines analytical engineering discipline, systematic hardware-software troubleshooting, and clean code architecture to build seamless user-centric digital experiences.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Web Technologies:</span>
+          <span class="skill-items">HTML5 (Semantic), CSS3 (Flexbox, Grid), JavaScript (ES6+), DOM Manipulation, Responsive Design, Bootstrap 5, Web Performance & Accessibility (a11y)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Engineering & Automation:</span>
+          <span class="skill-items">Mechatronics Systems, Industrial Automation, Electromechanical Diagnostics, Motor Control Circuits, Relay Logic, Sensor Integration, Preventive Maintenance, Safety Standards (GMP/HACCP)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Tools & Workflow:</span>
+          <span class="skill-items">Git, GitHub, VS Code, Vercel, Chrome DevTools, Cross-Browser Testing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK & INDUSTRIAL EXPERIENCE -->
+    <section>
+      <h2 class="section-title">Work & Industrial Experience</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Trainee &mdash; Mechanical & Electrical</span>
+          <span class="entry-date">Sep 2025 &ndash; Dec 2025</span>
+        </div>
+        <div class="entry-location"><span class="entry-company">Nestlé Nigeria</span> &bull; Lagos, Nigeria</div>
+        <ul class="bullet-list">
+          <li>Supported routine preventive and corrective maintenance across high-speed packaging machinery and automated processing lines.</li>
+          <li>Assisted senior maintenance engineers in diagnosing and resolving electromechanical faults, sensor arrays, motor drives, and control circuits, minimizing unscheduled downtime.</li>
+          <li>Monitored automated equipment operations and reported mechanical/electrical anomalies to maintain peak line efficiency.</li>
+          <li>Strictly complied with international food manufacturing safety regulations, Good Manufacturing Practices (GMP), and factory health protocols.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION & VOCATIONAL TRAINING -->
+    <section>
+      <h2 class="section-title">Education & Vocational Training</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Ordinary National Diploma (OND) in Mechatronics Engineering</span>
+          <span class="entry-date">Class of 2026</span>
+        </div>
+        <div class="entry-location"><span class="entry-company">The Polytechnic, Ibadan</span> &bull; Oyo State, Nigeria</div>
+        <ul class="bullet-list">
+          <li>Comprehensive study covering mechanical systems, digital electronics, microcontrollers, control engineering, and computer programming fundamentals.</li>
+          <li>Applied analytical decomposition and systems-thinking to model, analyze, and troubleshoot complex engineering mechanisms.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Certificate in Automation and Engineering (1-Year Programme)</span>
+          <span class="entry-date">Sep 2025 &ndash; Jul 2026</span>
+        </div>
+        <div class="entry-location"><span class="entry-company">Automation and Engineering Academy</span> &bull; Nigeria</div>
+        <ul class="bullet-list">
+          <li>Completed intensive vocational training focused on industrial automation, motor control circuitry, relay logic, and electromechanical diagnostics.</li>
+          <li>Acquired practical expertise in sensor calibration (proximity, photoelectric, thermal), electrical panel wiring, and structured fault-finding.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section>
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Restaurant Website & Online Ordering Demo</span>
+          <span class="entry-date">Front-End Developer</span>
+        </div>
+        <p class="project-tech"><strong>Technologies:</strong> HTML5, CSS3, JavaScript (ES6+), WhatsApp API Integration</p>
+        <ul class="bullet-list">
+          <li>Built a mobile-first, responsive restaurant website featuring an interactive food catalog with high-resolution images and dynamic pricing.</li>
+          <li>Engineered an add-to-cart ordering flow and reservation booking form that formats customer selections and dispatches them directly via WhatsApp.</li>
+          <li>Implemented clean DOM manipulation and accessible form controls ensuring frictionless customer interaction across mobile and desktop.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Zampler TD Group &mdash; Financial Corporate Web Platform</span>
+          <span class="entry-date">Front-End Developer</span>
+        </div>
+        <p class="project-tech"><strong>Technologies:</strong> HTML5, CSS3, Bootstrap 5 Grid, Responsive Design</p>
+        <ul class="bullet-list">
+          <li>Developed a modern multi-section landing page for a financial services group, structured with responsive grid systems and clear service breakdowns.</li>
+          <li>Optimized asset loading, web typography, and component styling for seamless cross-browser consistency and high visual fidelity.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Personal Developer Portfolio (<a href="https://my-portfolio-qvypp3ht3-hassan-aeb8.vercel.app" target="_blank" style="color: var(--accent-color);">Live Demo</a>)</span>
+          <span class="entry-date">Front-End Developer</span>
+        </div>
+        <p class="project-tech"><strong>Technologies:</strong> Semantic HTML5, CSS3 Custom Properties, Vanilla JavaScript (ES6+), Vercel CI/CD</p>
+        <ul class="bullet-list">
+          <li>Architected and deployed a zero-framework dark-mode portfolio emphasizing web standards, semantic markup, and instant load speeds.</li>
+          <li>Engineered interactive features including active-section scroll spying using <code>IntersectionObserver</code>, smooth navigation, and client-side contact validation.</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
